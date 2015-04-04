@@ -2,7 +2,6 @@
 /**
  * Calm.js JS SRC
  */
-
 (function(root, factory) {
     if (typeof define === 'function' && define.amd) {
         define(factory);
@@ -25,8 +24,8 @@
      * @return {Boolean}           returns true if they are calm, false if they seem irate.
      */
     isCalm = function(text, threshold){
-        var text = (typeof text === "string") ? text.split(" ") : text,
-        threshold = threshold || 5;
+        text = (typeof text === "string") ? text.split(" ") : text,
+        threshold = (typeof text === "number") ? threshold : 5;
 
         var Check = text.map(function(word) {
             return word.match(/^[^a-z]+$/);
@@ -49,4 +48,3 @@
     return isCalm;
 
 });
-

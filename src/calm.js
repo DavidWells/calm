@@ -1,13 +1,6 @@
 /**
  * Calm.js JS SRC
  */
-
-/*
-usage:
-    isCalm("I AM TALKING LIKE AN ANGRY PERSON"); // returns false
-    isCalm("LOUD NOISES", 2); // returns false; threshold of 2 all caps words in a row
-    isCalm("I love the FBI"); // returns true; this person is calm and wierd
-*/
 (function(root, factory) {
     if (typeof define === 'function' && define.amd) {
         define(factory);
@@ -31,7 +24,7 @@ usage:
      */
     isCalm = function(text, threshold){
         text = (typeof text === "string") ? text.split(" ") : text,
-        threshold = threshold || 5;
+        threshold = (typeof text === "number") ? threshold : 5;
 
         var Check = text.map(function(word) {
             return word.match(/^[^a-z]+$/);
