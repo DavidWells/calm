@@ -8,11 +8,13 @@ Loud irate people everywhere!
 
 ## Usage:
 
-Include script and call isCalm(text, threshold);
+Include script and call `isCalm(text, threshold);`
 
 Parameters are `text` and `threshold`
 
-Threshold sets how strict you want to be with people's execessive use of FUCKING CAPS. Default is 5
+Threshold sets how strict you want to be with people's execessive use of FUCKING CAPS.
+
+Default `threshold` is 5
 
 ```js
 	// isCalm(Text, Threshold);
