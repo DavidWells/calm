@@ -6,6 +6,12 @@ Check if person is calm or not in javascript.
 
 Loud irate people everywhere!!
 
+## Install
+
+```
+npm install calm.js
+```
+
 ## Usage:
 
 Include script and call `isCalm(text, threshold);`
@@ -17,19 +23,23 @@ Threshold sets how strict you want to be with people's execessive use of FUCKING
 Default `threshold` is 5
 
 ```js
-	// AHHHHHHHHHHHHHHHHHHHHHHHH
-    isCalm("I AM TALKING LIKE AN ANGRY PERSON"); // returns false
+const isCalm = require('calm.js')
 
-	// threshold of 2 all caps words in a row
-    isCalm("LOUD NOISES", 2); // returns false;
+/* AHHHHHHHHHHHHHHHHHHHHHHHH */
+isCalm("I AM TALKING LIKE AN ANGRY PERSON") 
+// returns false
 
-	// this person is calm enough
-    isCalm("I love the GIANTS"); // returns true;
+/* threshold of 2 all caps words in a row */
+isCalm("LOUD NOISES", 2)
+// returns false
 
-	// real world example:
-	var isNegativeNancy = isCalm("I AM TALKING LIKE AN ANGRY PERSON");
-	if(isNegativeNancy) {
-		alert("WOAH CHILL OUT MAN");
-	}
+/* this person is calm enough */
+isCalm("I love the GIANTS") 
+// returns true
 
+/* real world example: */
+var isNegativeNancy = isCalm("I AM TALKING LIKE AN ANGRY PERSON");
+if (isNegativeNancy) {
+  alert("WOAH CHILL OUT MAN")
+}
 ```
